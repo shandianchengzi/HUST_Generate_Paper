@@ -295,7 +295,7 @@ class LLMAgent:
         # 在返回结果前保存缓存
         self._save_to_cache(cache_key, response)
 
-        return response
+        return cache_key, response
 
 agent = LLMAgent(model=DEFAULT_MODEL, init=False)
 # agent = LLMAgent(model=DEFAULT_MODEL, init=True)
